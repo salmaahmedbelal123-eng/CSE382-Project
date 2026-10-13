@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.idea/
+.vscode/
+
+# Data (download with the command in README)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Trained models / fitted pipelines (spec: exclude from ZIP; keep locally)
+artifacts/*
+!artifacts/.gitkeep
+*.joblib
+*.pkl
+*.pt
+*.h5
+
+# Zips and OS junk
+*.zip
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+seed: 42
+data:
+  url: https://raw.githubusercontent.com/afaq-ahmad/Hotel-booking-demand-Case-Study/master/H2.csv
+  raw_path: data/raw/H2.csv
+split:
+  test_size: 0.2
+  cv_folds: 5
+paths:
+  artifacts: artifacts/
+  outputs: outputs/
