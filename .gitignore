@@ -11,6 +11,7 @@ venv/
 # Data (download with the command in README)
 data/raw/*
 data/processed/*
+notebooks/data/
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
