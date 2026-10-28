@@ -11,8 +11,9 @@ venv/
 # Data (download with the command in README)
 data/raw/*
 data/processed/*
-!data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/train*.csv
+!data/processed/val*.csv
 
 # Trained models / fitted pipelines (spec: exclude from ZIP; keep locally)
 artifacts/*
