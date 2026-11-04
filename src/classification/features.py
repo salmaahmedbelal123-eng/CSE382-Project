@@ -1,4 +1,4 @@
-"""Load the train/validation data and build the preprocessing for the classification task.
+
 
 Author: Lujy (classification part)
 """
@@ -36,7 +36,7 @@ def clean_agent(a):
 def load_split(name):
     """Read data/processed/<name>.csv and return X (inputs) and y (the answer)."""
     df = pd.read_csv(PROCESSED / f"{name}.csv")
-    if "Agent" in df.columns:          # skip if the team already encoded Agent
+    if "Agent" in df.columns:          
         df["Agent"] = df["Agent"].apply(clean_agent)
     y = df[TARGET]
     X = df.drop(columns=[TARGET] + LEAKY_COLUMNS)
@@ -44,7 +44,7 @@ def load_split(name):
 
 
 def build_preprocessor(X):
-    """Fill missing values, scale numbers, one-hot encode text columns.
+    """
 
     Nothing is learned here. It is learned later, inside pipeline.fit(), on the
     TRAINING rows only (this is what prevents data leakage).
